@@ -175,16 +175,20 @@ Minden tábla már eleve 1. normálformában van, mert minden attribútum atomi.
 
 
 ## A program funkciói:
-#-Regisztráció, bejelentkezés, kijelentkezés, profil törlése
-#-Új csatorna létrehozása, meglévő frissítése, meglévő törlése, csatornák kilistázása
-#különböző kérések szerint
-#-Új műsor létrehozása, meglévő módosítása, és törlése, létrehozáskor csatornához és
-#időponthoz rendelése
-#-Szereplők kilistázása különböző kérések szerint, kiválasztott műsorban lévő szereplők
-#kilistázása, új szereplő létrehozása, műsorhoz rendelése, meglévő szereplő törlése és
-#-adatainak frissítése
-#-A műsorokhoz tartozó epizódok kilistázása, műsorok epizód listájának
-#módosítása(epizódok törlése, és új epizódok létrehozása)
+-Regisztráció, bejelentkezés, kijelentkezés, profil törlése
+
+-Új csatorna létrehozása, meglévő frissítése, meglévő törlése, csatornák kilistázása
+különböző kérések szerint
+
+-Új műsor létrehozása, meglévő módosítása, és törlése, létrehozáskor csatornához és
+időponthoz rendelése
+
+-Szereplők kilistázása különböző kérések szerint, kiválasztott műsorban lévő szereplők
+kilistázása, új szereplő létrehozása, műsorhoz rendelése, meglévő szereplő törlése és
+adatainak frissítése
+
+-A műsorokhoz tartozó epizódok kilistázása, műsorok epizód listájának
+módosítása(epizódok törlése, és új epizódok létrehozása)
 
 
 # A program telepítése és használata
