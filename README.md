@@ -1,7 +1,6 @@
 # SZTE-Adatbázisok gyakorlat dokumentáció:
 
-E-K diagramm:
-![EK](https://github.com/sanyopapa/Python-musorujsag-kotprog/blob/main/E-K%20diagram.png)
+![EK](https://github.com/sanyopapa/Python-musorujsag-kotprog/blob/main/E-K%20diagram.png "E-K diagram")
 
 A diagram értelmezése:
 
@@ -188,30 +187,48 @@ Minden tábla már eleve 1. normálformában van, mert minden attribútum atomi.
 #módosítása(epizódok törlése, és új epizódok létrehozása)
 
 
-# A program Python nyelven íródott, és MySQL adatbázist használ. Az Adatbázis app nevű
-# mappa pycharmban való megnyitásával, majd a pycharmba megfelelő csomagok
-# telepítésével, és a musorujsag.sql phpmyadminban való megnyitásával könnyedén üzembe
-# helyezhető. Az alkalmazás megnyitásakor egy vendég nézet fogad minket, amiben meg
-# tudjuk tekinteni az adatbázisban lévő csatornákat és adataikat, műsorokat, és adataikat,
-# szereplőket és adataikat, és bármelyik műsor epizódlistáját. A reg/log gombra kattintva a
-# regisztrációs és bejelentkező oldal tárul elénk. Ha bejelentkeztünk akkor az eddig felsorolt
-# funkciókat szintén látjuk, de a reg/log gomb helyén egy profil gombot találunk. A profil
-# gombra kattintva módosíthatjuk a fiókunk felhasználónevét vagy a jelszavát. A csatornák
-# gombra kattintva a vendégfunkciókon kívül találunk 3 új gombot amivel új csatornát tudunk
-# létrehozni, frissíteni tudunk meglévőt, vagy törölni tudunk. A műsorok gombra kattintva
-# ugyan ez a plusz 3 funkció fogad minket a műsorok kezeléséhez. Az epizódok gombra
-# kattintva találjuk az Epizódok frissítése gombot amivel frissíteni tudjuk egy meglévő műsor
-# epizódlistáját. Emellett beviteli mezők szereplők adataira, és 4 gomb amivel rá tudunk keresni
-# konkrét szereplőre, tudjuk őket törölni vagy módosítani, vagy éppen újat létrehozni és
-# hozzárendelni egy műsorhoz amiben szerepelni fog.
-## Az összetett lekérdezések a következő helyeken találhatók a main.py-ban:
+# A program telepítése és használata
 
-# 977.sor-988.sorig
+A program **Python** nyelven íródott, és **MySQL** adatbázist használ.  
 
-# 909.sor
+Az **Adatbázis app** nevű mappa **PyCharmban** való megnyitásával, majd a PyCharmba megfelelő csomagok telepítésével, és a **musorujsag.sql** fájl **phpMyAdminban** való importálásával könnyedén üzembe helyezhető.  
 
-# 839.sor
+Az alkalmazás megnyitásakor egy **vendég nézet** fogad minket, amelyben megtekinthetjük:  
+- A csatornákat és adataikat  
+- A műsorokat és adataikat  
+- A szereplőket és adataikat  
+- Bármelyik műsor epizódlistáját  
 
-# 393.sor
+A **regisztrációs/bejelentkezési (reg/log) gombra** kattintva a regisztrációs és bejelentkező oldal jelenik meg.  
 
+Ha bejelentkezünk, továbbra is elérjük az eddig felsorolt funkciókat, de a **reg/log gomb helyett egy profil gombot** találunk.  
+A **profil gombra** kattintva módosíthatjuk a fiókunk **felhasználónevét vagy jelszavát**.  
+
+## További funkciók bejelentkezés után
+
+- **Csatornák kezelése:**  
+  - Új csatorna létrehozása  
+  - Meglévő csatorna frissítése  
+  - Csatorna törlése  
+
+- **Műsorok kezelése:**  
+  - Új műsor létrehozása  
+  - Műsor frissítése  
+  - Műsor törlése  
+
+- **Epizódok kezelése:**  
+  - Epizódok frissítése egy meglévő műsorhoz  
+
+- **Szereplők kezelése:**  
+  - Adatok bevitele  
+  - Szereplő keresése  
+  - Szereplő törlése vagy módosítása  
+  - Új szereplő létrehozása és hozzárendelése egy műsorhoz  
+
+## Összetett lekérdezések a `main.py` fájlban
+
+- **977. sor - 988. sor**  
+- **909. sor**  
+- **839. sor**  
+- **393. sor**  
 
