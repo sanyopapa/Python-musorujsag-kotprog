@@ -1,7 +1,7 @@
 # SZTE-Adatbázisok gyakorlat dokumentáció:
 
 E-K diagramm:
-![EK](http://url/to/img.png)
+![EK](https://github.com/sanyopapa/Python-musorujsag-kotprog/blob/main/E-K%20diagram.png)
 
 A diagram értelmezése:
 
@@ -149,128 +149,69 @@ Minden tábla már eleve 1. normálformában van, mert minden attribútum atomi.
 
 - Nincs tranzitív függés, tehát 3NF teljesül.
 
+| Tábla      | Mező              | Típus            | Megjegyzés |
+|------------|------------------|-----------------|------------|
+| **ADMIN**  | Email            | Karaktersorozat | Az admin email címe(kulcs) |
+|            | Nev              | Karaktersorozat | Az admin neve |
+|            | Jelszo           | Karaktersorozat | Az admin fiókjának a jelszava |
+|            | Utolso_belepes   | Időpont         | Az admin utolsó bejelentkezése a fiókjába |
+| **CSATORNA** | Nev            | Karaktersorozat | A csatorna neve(kulcs) |
+|            | Kategoria        | Karaktersorozat | A csatorna kategóriája |
+|            | Leiras           | Karaktersorozat | A csatorna leírása |
+|            | Email            | Karaktersorozat | A csatornát felvevő admin email címe(Külső kulcs) |
+| **MŰSOR**  | Cim              | Karaktersorozat | A műsor címe(kulcs) |
+|            | Mikor            | Dátum           | A műsor sugárzásának időpontja(kulcs) |
+|            | Hol              | Karaktersorozat | A csatorna neve, ahol sugározzák |
+|            | Ismerteto        | Karaktersorozat | A műsor ismertetője |
+|            | Email            | Karaktersorozat | A műsort felvevő admin email címe(külső kulcs) |
+| **SZEREPLŐK** | Cim           | Karaktersorozat | A műsor, amiben a szereplő szerepel(külső kulcs) |
+|            | Szuletesi_datum  | Dátum           | A szereplő születési dátuma(kulcs) |
+|            | Foglalkozas      | Karaktersorozat | A szereplő foglalkozása |
+|            | Nemzetiseg       | Karaktersorozat | A szereplő nemzetisége |
+|            | Nev              | Karaktersorozat | A szereplő neve(kulcs) |
+| **VETÍT**  | Nev              | Karaktersorozat | A csatorna neve, ahol a műsort vetítik(kulcs) |
+|            | Cim              | Karaktersorozat | A vetített műsor címe(kulcs) |
+| **EPIZÓDOK** | Cim            | Karaktersorozat | A műsor, amihez az epizód tartozik(kulcs) |
+|            | Epizod           | Szám            | Az epizód sorszáma(kulcs) |
 
-## Tábla Mező Típus Megjegyzés
-
-## ADMIN Email Karaktersorozat Az admin email címe(kulcs)
-
-## Nev Karaktersorozat Az admin neve
-
-## Jelszo Karaktersorozat Az admin fiókjának a jelszava
-
-## Utolso_belepes Időpont Az admin utolsó bejelentkezése a
-
-## fiókjába
-
-## CSATORNA Nev Karaktersorozat A csatorna neve(kulcs)
-
-## Kategoria Karaktersorozat A csatorna kategóriája
-
-## Leiras Karaktersorozat A csatorna leírása
-
-## Email Karaktersorozat A csatornát felvevő admin email
-
-## címe(Külső kulcs)
-
-## MŰSOR Cim Karaktersorozat A műsor címe(kulcs)
-
-## Mikor Dátum A műsor sugárzásának időpontja(kulcs)
-
-## Hol Karaktersorozat A csatorna neve, ahol sugározzák
-
-## Ismerteto Karaktersorozat A műsor ismertetője
-
-## Email Karaktersorozat A műsort felvevő admin email
-
-## címe(külső kulcs)
-
-## SZEREPLŐK Cim Karaktersorozat A műsor, amiben a szereplő
-
-## szerepel(külső kulcs)
-
-## Születesi_datum Dátum A szereplő születési dátuma(kulcs)
-
-## Foglalkozas Karaktersorozat A szereplő foglalkozása
-
-## Nemzetiseg Karaktersorozat A szereplő nemzetisége
-
-## Nev Karaktersorozat A szereplő neve(kulcs)
-
-## VETÍT Nev Karaktersorozat A csatorna neve, ahol a műsort
-
-## vetítik(kulcs)
-
-## Cim Karaktersorozat A vetített műsor címe(kulcs)
-
-## EPIZÓDOK Cim Karaktersorozat A műsor, amihez az epizód
-
-## tartozik(kulcs)
-
-## Epizod Szám Az epizód sorszáma(kulcs)
 
 ## A program funkciói:
-
-##  Regisztráció, bejelentkezés, kijelentkezés, profil törlése
-
-##  Új csatorna létrehozása, meglévő frissítése, meglévő törlése, csatornák kilistázása
-
-## különböző kérések szerint
-
-##  Új műsor létrehozása, meglévő módosítása, és törlése, létrehozáskor csatornához és
-
-## időponthoz rendelése
-
-##  Szereplők kilistázása különböző kérések szerint, kiválasztott műsorban lévő szereplők
-
-## kilistázása, új szereplő létrehozása, műsorhoz rendelése, meglévő szereplő törlése és
-
-## adatainak frissítése
-
-##  A műsorokhoz tartozó epizódok kilistázása, műsorok epizód listájának
-
-## módosítása(epizódok törlése, és új epizódok létrehozása)
+#-Regisztráció, bejelentkezés, kijelentkezés, profil törlése
+#-Új csatorna létrehozása, meglévő frissítése, meglévő törlése, csatornák kilistázása
+#különböző kérések szerint
+#-Új műsor létrehozása, meglévő módosítása, és törlése, létrehozáskor csatornához és
+#időponthoz rendelése
+#-Szereplők kilistázása különböző kérések szerint, kiválasztott műsorban lévő szereplők
+#kilistázása, új szereplő létrehozása, műsorhoz rendelése, meglévő szereplő törlése és
+#-adatainak frissítése
+#-A műsorokhoz tartozó epizódok kilistázása, műsorok epizód listájának
+#módosítása(epizódok törlése, és új epizódok létrehozása)
 
 
-## A program Python nyelven íródott, és MySQL adatbázist használ. Az Adatbázis app nevű
-
-## mappa pycharmban való megnyitásával, majd a pycharmba megfelelő csomagok
-
-## telepítésével, és a musorujsag.sql phpmyadminban való megnyitásával könnyedén üzembe
-
-## helyezhető. Az alkalmazás megnyitásakor egy vendég nézet fogad minket, amiben meg
-
-## tudjuk tekinteni az adatbázisban lévő csatornákat és adataikat, műsorokat, és adataikat,
-
-## szereplőket és adataikat, és bármelyik műsor epizódlistáját. A reg/log gombra kattintva a
-
-## regisztrációs és bejelentkező oldal tárul elénk. Ha bejelentkeztünk akkor az eddig felsorolt
-
-## funkciókat szintén látjuk, de a reg/log gomb helyén egy profil gombot találunk. A profil
-
-## gombra kattintva módosíthatjuk a fiókunk felhasználónevét vagy a jelszavát. A csatornák
-
-## gombra kattintva a vendégfunkciókon kívül találunk 3 új gombot amivel új csatornát tudunk
-
-## létrehozni, frissíteni tudunk meglévőt, vagy törölni tudunk. A műsorok gombra kattintva
-
-## ugyan ez a plusz 3 funkció fogad minket a műsorok kezeléséhez. Az epizódok gombra
-
-## kattintva találjuk az Epizódok frissítése gombot amivel frissíteni tudjuk egy meglévő műsor
-
-## epizódlistáját. Emellett beviteli mezők szereplők adataira, és 4 gomb amivel rá tudunk keresni
-
-## konkrét szereplőre, tudjuk őket törölni vagy módosítani, vagy éppen újat létrehozni és
-
-## hozzárendelni egy műsorhoz amiben szerepelni fog.
-
+# A program Python nyelven íródott, és MySQL adatbázist használ. Az Adatbázis app nevű
+# mappa pycharmban való megnyitásával, majd a pycharmba megfelelő csomagok
+# telepítésével, és a musorujsag.sql phpmyadminban való megnyitásával könnyedén üzembe
+# helyezhető. Az alkalmazás megnyitásakor egy vendég nézet fogad minket, amiben meg
+# tudjuk tekinteni az adatbázisban lévő csatornákat és adataikat, műsorokat, és adataikat,
+# szereplőket és adataikat, és bármelyik műsor epizódlistáját. A reg/log gombra kattintva a
+# regisztrációs és bejelentkező oldal tárul elénk. Ha bejelentkeztünk akkor az eddig felsorolt
+# funkciókat szintén látjuk, de a reg/log gomb helyén egy profil gombot találunk. A profil
+# gombra kattintva módosíthatjuk a fiókunk felhasználónevét vagy a jelszavát. A csatornák
+# gombra kattintva a vendégfunkciókon kívül találunk 3 új gombot amivel új csatornát tudunk
+# létrehozni, frissíteni tudunk meglévőt, vagy törölni tudunk. A műsorok gombra kattintva
+# ugyan ez a plusz 3 funkció fogad minket a műsorok kezeléséhez. Az epizódok gombra
+# kattintva találjuk az Epizódok frissítése gombot amivel frissíteni tudjuk egy meglévő műsor
+# epizódlistáját. Emellett beviteli mezők szereplők adataira, és 4 gomb amivel rá tudunk keresni
+# konkrét szereplőre, tudjuk őket törölni vagy módosítani, vagy éppen újat létrehozni és
+# hozzárendelni egy műsorhoz amiben szerepelni fog.
 ## Az összetett lekérdezések a következő helyeken találhatók a main.py-ban:
 
-##  977.sor-988.sorig
+# 977.sor-988.sorig
 
-##  909.sor
+# 909.sor
 
-##  839.sor
+# 839.sor
 
-##  393.sor
+# 393.sor
 
 
